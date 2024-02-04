@@ -2,26 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reserva - Isabella</title>
-    <link
-      rel="stylesheet"
-      href="style.css"
-    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="container">
-      <form class="container">
+      <form class="container" id="formReserva">
         <!-- personal -->
         <fieldset class="container-personal">
           <legend class="subtitle">Información Personal</legend>
           <label>
             <input
               type="text"
-              name="nombre"
               id="nombre"
               placeholder="Nombre completo"
               class="input"
@@ -33,7 +26,6 @@
           <label>
             <input
               type="text"
-              name="apellidos"
               id="apellidos"
               placeholder="Apellidos"
               class="input"
@@ -43,19 +35,14 @@
             />
           </label>
           <label>
-            <select
-              name="tipoDocumento"
-              id="tipoDocumento"
-              class="input"
-              required
-            >
-              <option>Tipo de documento</option>
+            <select id="tipoDocumento" class="input" required>
+              <option selected>Tipo de de documento</option>
+              <option value="cc">Cedula de ciudadania</option>
             </select>
           </label>
           <label>
             <input
               type="text"
-              name="documento"
               id="documento"
               placeholder="Numero de documento"
               class="input"
@@ -67,7 +54,6 @@
           <label>
             <input
               type="date"
-              name="fechaNacimiento"
               id="fechaNacimiento"
               class="input"
               max="2006-01-31"
@@ -76,21 +62,12 @@
           </label>
           <div class="check-group">
             <label class="switch socket">
-              <input
-                type="radio"
-                class="switch"
-                name="sexo"
-                checked
-              />
+              <input type="radio" class="switch" name="sex" checked />
               <span class="switch slider" />
               Hombre
             </label>
             <label class="switch socket">
-              <input
-                type="radio"
-                class="switch"
-                name="sexo"
-              />
+              <input type="radio" class="switch" name="sex" />
               <span class="switch slider" />
               Mujer
             </label>
@@ -102,9 +79,8 @@
           <label>
             <input
               type="tel"
-              name="contacto"
-              id="contacto"
-              placeholder="Numero de teléfono"
+              id="contact"
+              placeholder="Número de teléfono"
               class="input"
               required
               pattern="[0-9]{10}"
@@ -114,8 +90,7 @@
           <label>
             <input
               type="email"
-              name="Correo electrónico"
-              id="Correo electrónico"
+              id="email"
               placeholder="Correo electrónico"
               class="input"
               required
@@ -127,32 +102,21 @@
           <label>
             <input
               type="text"
-              name="Dirección"
-              id="Dirección"
+              id="address"
               placeholder="Dirección"
               class="input"
               required
-              pattern="[A-Z][A-Z\s\x27,.-]+"
               minlength="6"
             />
           </label>
           <label>
-            <select
-              name="ciudad"
-              id="ciudad"
-              class="input"
-              required
-            >
-              <option>Ciudad</option>
+            <select name="city" id="ciudad" class="input" required>
+              <option selected>Ciudad</option>
+              <option value="Medellín ">Medellín</option>
             </select>
           </label>
         </fieldset>
-        <button
-          type="submit"
-          class="btn"
-        >
-          CONTINUAR
-        </button>
+        <button id="btnReserva" type="submit" class="btn">CONTINUAR</button>
       </form>
     </main>
     <script src="./reserva.js"></script>
